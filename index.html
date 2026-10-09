@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Conference 2026 - Registration (Variant 14)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-wrapper">
+    <div class="card-container">
+      
+      <!-- Медіа-блок (Адаптивний банер події) -->
+      <figure class="event-banner">
+        <svg class="banner-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IT Conference Banner">
+          <defs>
+            <linearGradient id="grad14" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#1b365d;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#008080;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grad14)" rx="12"/>
+          <circle cx="330" cy="40" r="70" fill="rgba(255,255,255,0.08)"/>
+          <text x="24" y="65" fill="#ffffff" font-size="22" font-weight="bold">TECH CONF 2026</text>
+          <text x="24" y="95" fill="#e0e0e0" font-size="13">Варіант №14: Модуль реєстрації</text>
+          <rect x="24" y="125" width="130" height="30" rx="6" fill="rgba(255,255,255,0.2)"/>
+          <text x="36" y="145" fill="#ffffff" font-size="12" font-weight="600">15-16 Жовтня</text>
+        </svg>
+        <figcaption class="sr-only">Офіційний банер реєстрації на IT-конференцію</figcaption>
+      </figure>
+
+      <!-- Форма реєстрації -->
+      <form class="registration-form" action="#" method="POST" novalidate>
+        <header class="form-header">
+          <h2>Реєстрація учасника</h2>
+          <p>Заповніть форму для отримання квитка та доступу до матеріалів</p>
+        </header>
+
+        <!-- Поле: Повне ім'я -->
+        <div class="form-group">
+          <label for="fullName">Повне ім'я <span class="required-star">*</span></label>
+          <input type="text" id="fullName" name="fullName" placeholder="Олександр Коваленко" required minlength="2">
+          <span class="error-message">Вкажіть ваше ім'я (мінімум 2 символи)</span>
+        </div>
+
+        <!-- Поле: Email -->
+        <div class="form-group">
+          <label for="userEmail">Email адреса <span class="required-star">*</span></label>
+          <input type="email" id="userEmail" name="userEmail" placeholder="alex@example.com" required>
+          <span class="error-message">Введіть коректну електронну адресу</span>
+        </div>
+
+        <!-- Поле: Посада -->
+        <div class="form-group">
+          <label for="jobTitle">Посада / Role <span class="required-star">*</span></label>
+          <input type="text" id="jobTitle" name="jobTitle" placeholder="Frontend Developer / Student" required>
+          <span class="error-message">Вкажіть вашу поточну посаду або статус</span>
+        </div>
+
+        <!-- Вибір секції (Select) -->
+        <div class="form-group">
+          <label for="conferenceTrack">Обрати секцію <span class="required-star">*</span></label>
+          <select id="conferenceTrack" name="conferenceTrack" required>
+            <option value="" disabled selected>-- Оберіть напрямок --</option>
+            <option value="frontend">Web Development & Frontend</option>
+            <option value="backend">Backend & Cloud Architecture</option>
+            <option value="ai-ml">AI & Machine Learning</option>
+            <option value="design">UI/UX Design & Product</option>
+          </select>
+          <span class="error-message">Будь ласка, оберіть напрямок</span>
+        </div>
+
+        <!-- Завантаження файлу (Аватар / CV) -->
+        <div class="form-group">
+          <label for="userAvatar">Аватар або CV (PDF, PNG, JPG)</label>
+          <input type="file" id="userAvatar" name="userAvatar" accept=".pdf,.png,.jpg,.jpeg">
+        </div>
+
+        <!-- Чекбокс згоди -->
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="termsAgree" name="termsAgree" required>
+          <label for="termsAgree">Я погоджуюся з правилами проведення та обробкою персональних даних <span class="required-star">*</span></label>
+        </div>
+
+        <!-- Кнопки дій -->
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Зареєструватися</button>
+          <button type="reset" class="btn btn-secondary">Скинути</button>
+        </div>
+      </form>
+
+    </div>
+  </main>
+</body>
+</html>
